@@ -1,0 +1,30 @@
+<html>
+<body>
+    <div class="container">
+        <h1 class="text-center" style="font-size: 10vh">Indentity Varifcation<span style="font-size: 3vh;">...</span></h1>
+        <h4>Pand Card Temering Detection...</h4>
+        <br>
+        <h2>Upload Your Image!</h2>
+
+        <div class="text-center">
+            <form action="scanner" method=post enctype=multipart/form-data>
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" name="file" class="custom-file-input" id="inputGroupFile01"
+                               aria-describedby="inputGroupFileAddon01" accept="image/*">
+                    </div>
+                </div>
+
+                <br>
+                <button type="submit" class="btn btn-raised btn-primary">Detect Text</button>
+            </form>
+        </div>
+    </div>
+
+{% if scanned %}
+    <hr>
+    <h1>Scanned results</h1>
+{% endif %}
+
+</body>
+</html>
